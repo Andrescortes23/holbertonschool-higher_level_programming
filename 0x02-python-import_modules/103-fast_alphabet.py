@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-from alph import a
+from alph import UpperAlph
+UpperAlph()
