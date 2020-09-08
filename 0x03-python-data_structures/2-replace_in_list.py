@@ -8,5 +8,5 @@ def replace_in_list(my_list, idx, element):
     elif idx >= 0:
         for a in range(len(my_list)):
             if a == idx:
-                my_list[a] = element
+                my_list[a - 1] = element
                 return (my_list)
