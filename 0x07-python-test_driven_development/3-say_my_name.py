@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module with a function that prints 2 strings"""
 
+
 def say_my_name(first_name, last_name=""):
     """
     Method that print check if the two arguments passed

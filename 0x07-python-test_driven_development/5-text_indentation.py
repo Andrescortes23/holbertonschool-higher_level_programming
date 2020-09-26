@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Module with functions that print a text divide in parts"""
 
+
 def text_indentation(text):
+
     """
     Method to find certain characters in the passed text, when is founded
     print two new lines and continue printing the text

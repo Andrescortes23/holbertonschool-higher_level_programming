@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """Module with function to print a square with the character #"""
+
+
 def print_square(size):
+
     """
     Method to print # size numbers time size times
     """

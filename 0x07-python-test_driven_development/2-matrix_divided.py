@@ -2,7 +2,9 @@
 """Module with function that divides all elements of a matrix
    and return new matrix with the result of divisions"""
 
+
 def matrix_divided(matrix, div):
+
     """
     Method to divide numbers by a given number
 
