@@ -1,0 +1,54 @@
+The ``2-matrix_divided`` module
+============================
+
+Using ``matrix_divided``
+_____________________
+
+
+Import function:
+       >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+       Tests:
+	      passing matrix with 3 lists
+              >>> matrix_divided([[1, 2], [3, 4], [5, 6]], 3)
+      	      [[0.33, 0.67], [1.0, 1.33], [1.67, 2.0]]
+
+	      passing matrix with negative numbers
+	      >>> matrix_divided([[-1, -2], [-3, -4]], 3)
+	      [[-0.33, -0.67], [-1.0, -1.33]]
+
+	      passing number instead a matrix
+	      >>> matrix_divided(6, 3)
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: object of type 'int' has no len()
+
+	      divide the matrix with the result of division
+	      >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 10 / 6)
+	      [[0.6, 1.2, 1.8], [2.4, 3.0, 3.6]]
+
+	      passing an empty list
+	      >>> matrix_divided([], 3)
+	      []
+
+	      divide matrix with another matrix
+	      >>> matrix_divided([[12, 23], [32, 41]], [[2, 3], [5, 6]])
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: div must be a number
+
+	      divide by nothing
+	      >>> matrix_divided([[45, 13], [10, 98]], )
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+	      passing div as None
+	      >>> matrix_divided([[45, 13], [10, 98]], None)
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: div must be a number
+
+	      passig div as long number
+	      >>> matrix_divided([[12, 32], [23, 46]], 1236781264786)
+	      [[0.0, 0.0], [0.0, 0.0]]

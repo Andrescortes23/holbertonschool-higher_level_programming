@@ -1,0 +1,44 @@
+The ``3-say_my_name`` module
+============================
+
+Using ``say_my_name``
+_____________________
+
+
+Import function:
+       >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+       Tests:
+	      passing 3 arguments
+              >>> say_my_name("John", "Smith", "Joun")
+      	      Traceback (most recent call last):
+	      ...
+	      TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+	      passing number as last name
+	      >>> say_my_name("John", 32)
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: last_name must be a string
+
+	      passing None as first name
+	      >>> say_my_name(None, "Wayne")
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: first_name must be a string
+
+	      passing a empty last name
+	      >>> say_my_name("Kylo", "")
+	      My name is Kylo 
+
+	      passing a white space as first name
+	      >>> say_my_name(" ", "Julius")
+	      My name is   Julius
+
+	      passing white space as both arguments
+	      >>> say_my_name(" ", " ")
+	      My name is    
+
+	      passing last name as element of a tuple
+	      >>> say_my_name("Yuart", ("lit"))
+	      My name is Yuart lit

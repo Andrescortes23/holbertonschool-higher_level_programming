@@ -1,0 +1,64 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+_____________________
+
+
+Import function:
+       >>> add_integer	= __import__('0-add_integer').add_integer
+
+       Tests:
+	      passing two positive integers
+              >>> add_integer(2, 1)
+      	      3
+
+	      passing one positive integer
+       	      >>> add_integer(3)
+       	      101
+
+	      passing two negative integers
+	      >>> add_integer(-4, -2)
+	      -6
+
+	      passing one negative integers
+	      >>> add_integer(-2)
+	      96
+
+	      passing one positive integer and a string
+	      >>> add_integer(2, "Holbi")
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: b must be an integer
+
+	      passing string and negative integer
+	      >>> add_integer("Holbi", -3)
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: a must be an integer
+
+	      passing one add and one integer
+	      >>> add_integer(2 + 1, 45)
+	      48
+
+	      passing nothing
+	      >>> add_integer()
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: add_integer() missing 1 required positional argument: 'a'
+
+	      passing undefined variable as second argument
+	      >>> add_integer(2, o)
+	      Traceback (most recent call last):
+	      ...
+	      NameError: name 'o' is not defined
+
+	      passing a with 10 white spaces before, same with b
+	      >>> add_integer(          10,          10)
+	      20
+
+	      passing three arguments
+	      >>> add_integer(2, 3, 9)
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
