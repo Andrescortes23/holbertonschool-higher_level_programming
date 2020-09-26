@@ -1,0 +1,54 @@
+The ``5-text_indentation`` module
+============================
+
+Using ``text_indentation``
+_____________________
+
+
+Import function:
+       >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+       Tests:
+	      passing number as text
+              >>> text_indentation(20)
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: text must be a string
+
+	      passing 2 strings as text
+	      >>> text_indentation("Helou. Bonyurt", "Como estais? Tu")
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+	      passing nothing
+	      >>> text_indentation()
+	      Traceback (most recent call last):
+	      ...
+	      TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+	      passing only "? . :" as text
+	      >>> text_indentation("?.:")
+	      ?
+	      <BLANKLINE>
+	      .
+	      <BLANKLINE>
+	      :
+	      <BLANKLINE>
+
+	      passing text with \n characters
+	      >>> text_indentation("El\n Problema de: los Tres\n\n Cuerpos\n")
+	      El
+ 	       Problema de:
+	      <BLANKLINE>
+	      los Tres
+	      <BLANKLINE>
+	       Cuerpos
+
+	       passing text with white spaces and the begining
+	       >>> text_indentation("   He dejado espacios")
+	          He dejado espacios
+
+	       passing empty text
+	       >>> text_indentation("")
+	       
