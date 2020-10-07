@@ -1,4 +1,4 @@
-``The 1-my_list`` module
+The ``1-my_list`` module
 =============================
 
 Using ``print_sorted``
@@ -6,7 +6,7 @@ _____________________________
 
 
 Import function:
-       >>> MyList = __import__('1-my_list').print_sorted
+       >>> MyList = __import__('1-my_list').MyList
 
        Passing integers
        >>> my_list = MyList()
