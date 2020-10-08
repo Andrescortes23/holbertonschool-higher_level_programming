@@ -2,8 +2,7 @@
 """Module to add all arguments to python list and saved in file as json"""
 
 
-import sys
-import json
+from sys import argv
 
 
 save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
@@ -17,8 +16,8 @@ try:
 except FileNotFoundError:
     lista = []
 
-while count <= len(sys.argv) - 1:
-    lista.append(sys.argv[count])
+while count <= len(argv) - 1:
+    lista.append(argv[count])
     count += 1
 
 save_to_json_file(lista, "add_item.json")
