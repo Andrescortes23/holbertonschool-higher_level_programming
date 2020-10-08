@@ -11,4 +11,6 @@ try:
     lista = load_from_json_file("add_item.json")
 except:
     lista = []
+for a in range(1, len(argv)):
+    lista.append(argv[a])
 save_to_json_file(lista + argv[1:], "add_item.json")
