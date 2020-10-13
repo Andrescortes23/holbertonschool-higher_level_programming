@@ -60,12 +60,15 @@ class Base:
         """return list of instances"""
         Thelist = []
         filename = cls.__name__ + ".json"
+
+        if cls is None:
+            return Thelist
         try:
             with open(filename, "r") as Thefile:
                 Rdfile = Thefile.read()
-                pylist = cls.from_json_string(Rdfile)
-            for a in pylist:
-                Thelist.append(cls.create(**a))
+                Thelist = cls.from_json_string(Rdfile)
+            for a in range(len(Thelist)):
+                Thelist[a] = cls.create(**Thelist[a])
         except Exception:
             pass
         return Thelist
