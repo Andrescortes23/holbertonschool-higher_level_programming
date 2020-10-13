@@ -27,15 +27,13 @@ class Base:
         """save json str to file"""
         filename = cls.__name__ + ".json"
         Newlist = []
-        for a in list_objs:
-            Newlist.append(a.to_dictionary())
-        jss = cls.to_json_string(Newlist)
-        with open(filename, "w") as NFile:
-            if list_objs is None:
-                Newlist = []
-                NFile.write(Newlist)
-            else:
-                NFile.write(jss)
+        if list_objs is None:
+            cls.to_json_string(list_objs)
+        else:
+            for a in list_objs:
+                Newlist.append(cls.to_dictionary(a))
+        with open(filename, "w") as Thefile:
+            Thefile.write(cls.to_json_string(Newlist))
 
     @staticmethod
     def from_json_string(json_string):
