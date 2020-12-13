@@ -11,10 +11,9 @@ if __name__ == '__main__':
                                    sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
 
-    #    if states:
-    try:
-        thestate = Session().query(State).first()
+    thestate = Session().query(State).first()
+    if thestate:
         print("{}: {}".format(thestate.id, thestate.name))
-    except Exception:
+    else:
         print("Nothing")
     Session().close()
