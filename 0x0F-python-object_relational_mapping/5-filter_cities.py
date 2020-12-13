@@ -25,7 +25,8 @@ if __name__ == '__main__':
             if cnt < len(rows) - 1:
                 print(city, end=', ')
             elif cnt == len(rows) - 1:
-                print(city)
+                print(city, end='')
             cnt += 1
+    print()
     cur.close()
     db.close()
