@@ -15,8 +15,8 @@ if __name__ == '__main__':
 
     cur.execute("SELECT cities.name FROM cities\
     INNER JOIN states ON cities.state_id=states.id\
-    WHERE states.name=%(thestate)s ORDER BY cities.id ASC",
-                {'thestate': thestate})
+    WHERE states.name=%(state)s ORDER BY cities.id ASC",
+                {'state': thestate})
     rows = cur.fetchall()
     cnt = 0
 
