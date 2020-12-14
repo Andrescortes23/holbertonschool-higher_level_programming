@@ -16,5 +16,5 @@ if __name__ == '__main__':
         .filter(State.name.like('%a'))
     for state in states:
         session.delete(state)
-        session.commit()
+    session.commit()
     session.close()
