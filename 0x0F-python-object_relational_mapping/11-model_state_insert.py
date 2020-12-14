@@ -12,9 +12,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new = State(id=6, name='Louisiana')
+    new = State(name='Louisiana')
     session.add(new)
     session.commit()
     states = session.query(State).order_by(State.id.desc()).first()
-    print(states.id)
+    print("{}".format(states.id))
     session.close()
