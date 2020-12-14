@@ -13,9 +13,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    try:
-        for states in session.query(State).filter(State.name == tosearch):
-            print("{}".format(states.id))
-    except:
+    states = session.query(State).filter(State.name == tosearch).first()
+    if states:
+        print("{}".format(states.id))
+    else:
         print("Not found")
     session.close()
