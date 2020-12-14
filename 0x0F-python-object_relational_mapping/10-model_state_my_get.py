@@ -15,6 +15,6 @@ if __name__ == '__main__':
 
     try:
         for states in session.query(State).filter(State.name == tosearch):
-            print(states.id)
+            print("{}".format(states.id))
     except:
         print("Not found")
