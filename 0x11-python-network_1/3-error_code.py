@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Send a request to the URL and displays the body of the response (decoded in utf-8)
+Send a request to the URL and displays the body of the response
 """
 
 from urllib import request, error
