@@ -9,6 +9,6 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    data = {"email". sys.argv[2]}
+    data = {"email": sys.argv[2]}
     reqst = requests.post(url, data)
     print(reqst.text)
