@@ -16,7 +16,10 @@ if __name__ == "__main__":
         if q.isalpha():
             data = {'q': q}
             resp = requests.post('http://0.0.0.0:5000/search_user', data)
-            resp = resp.json()
-            print("[{}] {}".format(resp.get('id'), resp.get('name')))
+            try:
+                resp = resp.json()
+                print("[{}] {}".format(resp.get('id'), resp.get('name')))
+            except:
+                print("Not a valid JSON")
         else:
             print("No result")
