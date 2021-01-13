@@ -16,6 +16,6 @@ else:
     if q.isalpha():
         resp = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
         resp = resp.json()
-        print("{} {}".format(resp.get('id'), resp.get('name')))
+        print("[{}] {}".format(resp.get('id'), resp.get('name')))
     else:
         print("No result")
