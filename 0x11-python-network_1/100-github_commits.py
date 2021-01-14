@@ -6,10 +6,10 @@ Commits in Github repo
 import requests
 from sys import argv
 
-repo = argv[2]
-user = argv[1]
+repo = argv[1]
+user = argv[2]
 resp = requests.get('https://api.github.com/repos/{}/{}/commits'
-                    .format(user, repo))
+                    .format(repo, user))
 resp = resp.json()
 for a in resp:
     for b in a:
