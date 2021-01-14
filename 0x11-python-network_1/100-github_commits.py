@@ -21,7 +21,7 @@ for a in resp:
                     for d in a[b][c]:
                         if d == 'name':
                             authname = a[b][c][d]
-                            iterat = 0
+iterat = 0
 while iterat < 10:
     print("{}: {}".format(sha, authname))
     iterat += 1
