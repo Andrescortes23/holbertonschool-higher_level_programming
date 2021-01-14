@@ -14,5 +14,6 @@ resp = resp.json()
 iterat = 0
 while iterat < 10:
     print("{}: {}".format(resp[iterat].get('sha'),
-                          resp[iterat].get('commit').get('author').get('name')))
+                          resp[iterat].get('commit').get('author')
+                          .get('name')))
     iterat += 1
