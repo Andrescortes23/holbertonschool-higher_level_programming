@@ -9,7 +9,7 @@ from sys import argv
 repo = argv[1]
 user = argv[2]
 resp = requests.get('https://api.github.com/repos/{}/{}/commits'
-                    .format(repo, user))
+                    .format(user, repo))
 resp = resp.json()
 for a in resp:
     for b in a:
@@ -21,7 +21,7 @@ for a in resp:
                     for d in a[b][c]:
                         if d == 'name':
                             authname = a[b][c][d]
-iterat = 0
+                            iterat = 0
 while iterat < 10:
     print("{}: {}".format(sha, authname))
     iterat += 1
